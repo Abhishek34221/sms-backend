@@ -3,9 +3,8 @@ from sqlalchemy.orm import Session
 from sqlalchemy import text
 from fastapi.middleware.cors import CORSMiddleware
 
-
-
 from app.schema import StudentCreate, StudentUpdate
+from app.database import engine, get_db
 
 Base.metadata.create_all(bind=engine)
 
